@@ -1,0 +1,81 @@
+########################
+# OS 공통
+########################
+
+# macOS
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+########################
+# Gradle / Build
+########################
+
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Kotlin 관련 캐시 디렉토리
+.kotlin/
+
+# 로그 / 임시 파일
+logs/
+*.log
+*.tmp
+
+########################
+# IntelliJ IDEA
+########################
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+########################
+# Eclipse
+########################
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+########################
+# NetBeans
+########################
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+########################
+# VS Code
+########################
+.vscode/
+
+########################
+# 기타
+########################
+# OS/IDE가 자동 생성하는 잡파일들
+*.swp
+*.swo

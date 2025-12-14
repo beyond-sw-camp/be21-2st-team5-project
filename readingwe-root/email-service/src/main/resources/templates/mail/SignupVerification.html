@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 완료</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 40px 0;">
+    <tr>
+        <td align="center">
+            <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <!-- Header -->
+                <tr>
+                    <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
+                        <h1 style="color: #ffffff; margin: 0; font-size: 28px;">회원가입을 환영합니다! 🎉</h1>
+                    </td>
+                </tr>
+
+                <!-- Content -->
+                <tr>
+                    <td style="padding: 40px 30px;">
+                        <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                            안녕하세요, <strong th:text="${username}">사용자</strong>님!
+                        </p>
+                        <p style="color: #666666; font-size: 15px; line-height: 1.6; margin: 0 0 20px;">
+                            회원가입이 정상적으로 완료되었습니다.
+                        </p>
+                        <p style="color: #666666; font-size: 15px; line-height: 1.6; margin: 0 0 30px;">
+                            이제부터 <strong>ReadingWe</strong>에서 다양한 독서 모임을 만들고 참여하실 수 있습니다.<br>
+                            아래 안내를 참고해 서비스를 시작해보세요.
+                        </p>
+
+                        <!-- Info Box (기존 코드 박스 재활용) -->
+                        <div style="background-color: #f8f9fa; border: 2px dashed #667eea; border-radius: 8px; padding: 30px; text-align: center; margin: 30px 0;">
+                            <p style="color: #666666; font-size: 14px; margin: 0 0 10px;">
+                                시작 가이드
+                            </p>
+                            <p style="color: #667eea; font-size: 16px; font-weight: 600; margin: 0;">
+                                1. 관심 있는 카테고리의 독서 모임을 둘러보세요.<br>
+                                2. 마음에 드는 모임에 참가 신청을 해보세요.<br>
+                                3. 직접 모임을 개설해 다른 사람들을 초대할 수도 있어요.
+                            </p>
+                        </div>
+
+                        <p style="color: #999999; font-size: 13px; line-height: 1.6; margin: 20px 0 0;">
+                            이 메일은 회원가입 완료 안내를 위해 발송되었습니다.<br>
+                            본인이 회원가입을 진행하지 않았다면 고객센터로 문의해주세요.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color: #f8f9fa; padding: 20px 30px; text-align: center; border-top: 1px solid #e9ecef;">
+                        <p style="color: #999999; font-size: 12px; margin: 0;">
+                            © 2025 Your Service. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클럽 해체 안내</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 40px 0;">
+    <tr>
+        <td align="center">
+            <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <!-- Header -->
+                <tr>
+                    <td style="background: linear-gradient(135deg, #868f96 0%, #596164 100%); padding: 40px 30px; text-align: center;">
+                        <h1 style="color: #ffffff; margin: 0; font-size: 28px;">클럽 해체 안내</h1>
+                    </td>
+                </tr>
+
+                <!-- Content -->
+                <tr>
+                    <td style="padding: 40px 30px;">
+                        <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 20px;">
+                            안녕하세요,
+                        </p>
+                        <p style="color: #666666; font-size: 15px; line-height: 1.6; margin: 0 0 30px;">
+                            <strong th:text="${clubName}">클럽명</strong>의 해체를 안내드립니다.
+                        </p>
+
+                        <div style="background-color: #f8f9fa; border-left: 4px solid #6c757d; border-radius: 4px; padding: 20px; margin: 20px 0;">
+                            <p style="color: #495057; font-size: 14px; margin: 0; line-height: 1.6;">
+                                📢 클럽 관리자의 결정에 따라 클럽이 해체되었습니다.<br><br>
+                                그동안 함께한 모든 순간들에 감사드립니다. 🙏
+                            </p>
+                        </div>
+
+                        <p style="color: #666666; font-size: 14px; line-height: 1.6; margin: 30px 0;">
+                            • 클럽의 모든 활동이 종료되었습니다<br>
+                            • 클럽 페이지는 더 이상 접근할 수 없습니다<br>
+                            • 다른 클럽에 가입하여 새로운 활동을 시작해보세요!
+                        </p>
+
+                        <div style="text-align: center; margin: 30px 0;">
+                            <a href="#" style="display: inline-block; background-color: #6c757d; color: #ffffff; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-size: 15px; font-weight: bold;">
+                                다른 클럽 찾아보기
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color: #f8f9fa; padding: 20px 30px; text-align: center; border-top: 1px solid #e9ecef;">
+                        <p style="color: #999999; font-size: 12px; margin: 0;">
+                            © 2024 Your Service. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

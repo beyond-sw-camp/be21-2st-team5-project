@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클럽 가입 신청</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 40px 0;">
+    <tr>
+        <td align="center">
+            <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <!-- Header -->
+                <tr>
+                    <td style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 40px 30px; text-align: center;">
+                        <h1 style="color: #ffffff; margin: 0; font-size: 28px;">새로운 가입 신청 📩</h1>
+                    </td>
+                </tr>
+
+                <!-- Content -->
+                <tr>
+                    <td style="padding: 40px 30px;">
+                        <p style="color: #333333; font-size: 16px; line-height: 1.6; margin: 0 0 30px;">
+                            <strong th:text="${clubName}">클럽명</strong>에 새로운 가입 신청이 있습니다.
+                        </p>
+
+                        <!-- Applicant Info -->
+                        <div style="background-color: #f8f9fa; border-radius: 8px; padding: 25px; margin: 20px 0;">
+                            <table width="100%" cellpadding="8" cellspacing="0">
+                                <tr>
+                                    <td style="color: #666666; font-size: 14px; width: 100px;">신청자</td>
+                                    <td style="color: #333333; font-size: 16px; font-weight: bold;" th:text="${applicantName}">신청자명</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div style="text-align: center; margin: 30px 0;">
+                            <a href="#" style="display: inline-block; background-color: #4facfe; color: #ffffff; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-size: 15px; font-weight: bold; margin: 0 5px;">
+                                승인하기
+                            </a>
+                            <a href="#" style="display: inline-block; background-color: #6c757d; color: #ffffff; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-size: 15px; font-weight: bold; margin: 0 5px;">
+                                거절하기
+                            </a>
+                        </div>
+
+                        <p style="color: #999999; font-size: 13px; line-height: 1.6; margin: 30px 0 0; text-align: center;">
+                            신청 관리 페이지에서 더 자세한 정보를 확인하실 수 있습니다.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color: #f8f9fa; padding: 20px 30px; text-align: center; border-top: 1px solid #e9ecef;">
+                        <p style="color: #999999; font-size: 12px; margin: 0;">
+                            © 2024 Your Service. All rights reserved.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

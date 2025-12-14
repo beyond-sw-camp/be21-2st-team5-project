@@ -1,0 +1,48 @@
+#spring.application.name=user-service
+#spring.application.name=2nd-backend
+spring:
+  application:
+    name: readingclub-service
+
+  datasource:
+    url: jdbc:mariadb://dev.macacolabs.site:3306/readwedb
+    username: readwe
+    password: readwe
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      max-lifetime: 30000
+      connection-timeout: 10000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+  data:
+    redis:
+      host: dev.macacolabs.site
+      port: 6789
+
+server:
+  port: 0
+
+jwt:
+  secret: aVeryLongAndSecureSecretKeyForHS256AlgorithmThatMustBeAtLeast32Bytes
+
+springdoc:
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  cache:
+    disabled: true
+  api-docs:
+    groups:
+      enabled: true
+  swagger-ui:
+    tags-sorter: alpha
+    operations-sorter: alpha

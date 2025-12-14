@@ -1,0 +1,90 @@
+spring:
+  application:
+    name: api-gateway
+
+
+  data:
+    redis:
+      host: dev.macacolabs.site
+      port: 6789
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+          # 1) user-service Swagger 문서 라우트
+          - id: user-service-api-docs
+            uri: lb://USER-SERVICE
+            predicates:
+              - Path=/user-service/v3/api-docs/**
+            filters:
+              - RewritePath=/user-service/v3/api-docs(?<segment>.*), /v3/api-docs$\{segment}
+
+          # 2) user-service 실제 API 라우트 (Jwt 필터 적용)
+          - id: user-service
+            uri: lb://USER-SERVICE
+            predicates:
+              - Path=/auth/**,/user/**,/userlike/**
+            filters:
+              - JwtAuthenticationFilter
+
+          # 3) book-service Swagger 문서 라우트 (Jwt 필터 X)
+          - id: book-service-api-docs
+            uri: lb://BOOK-SERVICE
+            predicates:
+              - Path=/book/v3/api-docs/**
+            filters:
+              - RewritePath=/book/v3/api-docs(?<segment>.*), /v3/api-docs$\{segment}
+
+          # 4) book-service 실제 API 라우트
+          - id: book-service
+            uri: lb://BOOK-SERVICE
+            predicates:
+              - Path=/book/**,/booklike/**,/book-report/**,/book-report-comment/**,/book-report-like/**
+            filters:
+              - JwtAuthenticationFilter
+
+          # 5) readingclub-service Swagger 문서 라우트 (Jwt 필터 X)
+          - id: readingclub-service-api-docs
+            uri: lb://READINGCLUB-SERVICE
+            predicates:
+              - Path=/reading-club/v3/api-docs/**
+            filters:
+              - RewritePath=/reading-club/v3/api-docs(?<segment>.*), /v3/api-docs$\{segment}
+
+          # 6) readingclub-service 실제 API 라우트
+          - id: readingclub-service
+            uri: lb://READINGCLUB-SERVICE
+            predicates:
+              - Path=/reading-club/**,/review/**
+            filters:
+              - JwtAuthenticationFilter
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8000
+
+jwt:
+  secret: aVeryLongAndSecureSecretKeyForHS256AlgorithmThatMustBeAtLeast32Bytes
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - name: user-service
+        url: /user-service/v3/api-docs
+      - name: readingclub-service
+        url: /reading-club/v3/api-docs
+      - name: book-service
+        url: /book/v3/api-docs

@@ -1,0 +1,26 @@
+#spring.application.name=email-service
+server:
+  port: 0
+
+spring:
+  application:
+    name: email-service
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: qkem1217@gmail.com
+    password: gycmtdrfobfbrieo
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
