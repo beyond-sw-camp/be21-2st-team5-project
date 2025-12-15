@@ -204,38 +204,22 @@ ReadWe는 독서를 좋아하는 사람들이 더욱 편리하게 소통하고, 
   
 # ERD 및 주요 도메인
 ## 요구사항 명세서
-<details>
-<summary>요구사항 명세서</summary>
-<div markdown="1">
     
 <img width="433" height="693" alt="스크린샷 2025-12-13 오후 9 03 34" src="https://github.com/user-attachments/assets/4a943d89-038f-4cdc-b3c9-ae992e1fe4ee" />
 
-</div>
-</details>
-
 ## DDD
-<details>
-<summary>miro</summary>
-<div markdown="1">
 
 <img width="2112" height="1460" alt="image" src="https://github.com/user-attachments/assets/80f4b5df-07c9-402f-b240-1ad0f890c5bc" />
 
-</div>
-</details>
 
 ## 논리 데이터 베이스 모델
-<details>
-<summary>ERD</summary>
-<div markdown="1">
 
 <img width="1901" height="872" alt="image" src="https://github.com/user-attachments/assets/892d444f-51c2-403e-8e7d-ecdd82386cb2" />
 ERD 링크
 [https://www.erdcloud.com/d/pB3faMZEj7tvLtfH3](https://www.erdcloud.com/d/STZY9fcram2cvZvb5)
 
-</div>
-</details>
 
-## Swagger
+## REST API 설계 문서
 
 <details>
 <summary> swagger</summary>
@@ -267,6 +251,11 @@ ERD 링크
 
 </div>
 </details>
+
+## 테스트 결과 보고서 
+
+<img width="2528" height="1492" alt="image" src="https://github.com/user-attachments/assets/4e7192e9-f4b2-47c3-b302-8e0fed8c3751" />
+
 
 ## 테스트 케이스 상세
 <details>
@@ -601,13 +590,8 @@ ERD 링크
 
 ## MSA 아키텍처 구조도
 
-<details>
-<summary> MSA 아키텍처 구조도</summary>
-<div markdown="1">
 <img width="1852" height="881" alt="image" src="https://github.com/user-attachments/assets/e6791924-0358-418b-b608-c07393b07d98" />
 
-</div>
-</details>
 
 # 팀원 회고
 <details>
